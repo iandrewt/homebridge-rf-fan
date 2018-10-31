@@ -176,7 +176,7 @@ Fan.prototype.identify = function(callback) {
 
 Fan.prototype.getServices = function() {
 	this.informationService = new Service.AccessoryInformation();
-	informationService
+	this.informationService
 	.setCharacteristic(Characteristic.Manufacturer, this.manufacturer)
 	.setCharacteristic(Characteristic.Model, this.model)
 	.setCharacteristic(Characteristic.SerialNumber, this.serial)
@@ -194,7 +194,7 @@ Fan.prototype.getServices = function() {
 	.on('get', this.getSpeed.bind(this))
 	.on('set', this.setSpeed.bind(this));
 
-	return [this.informationSerivce, this.fanService];
+	return [this.informationService, this.fanService];
 };
 
 Fan.prototype.getOn = function(callback) {
