@@ -5,13 +5,14 @@ var Service, Characteristic;
 module.exports = function(homebridge) {
 	Service = homebridge.hap.Service;
 	Characteristic = homebridge.hap.Characteristic;
-	homebridge.registerAccessory('homebridge-rf-fan', 'RF Fan', Fan);
+	homebridge.registerAccessory('homebridge-rf-fan', 'RF-Fan', Fan);
 };
 
 function Fan(log, config) {
 	this.log = log;
 
 	this.host = config.host;
+	this.port = config.port;
 	this.name = config.name;
 	this.manufacturer = config.manufacturer;
 	this.model = config.model;
@@ -28,7 +29,7 @@ function Fan(log, config) {
 
 Fan.prototype.getRelays = function(value, callback) {
 	request({
-		url: 'http://' + this.host + '/fan/api/v1.0/status',
+		url: 'http://' + this.host + ":" + this.port + '/fan/api/v1.0/status',
 		method: 'GET',
 		json: true,
 		body: value
