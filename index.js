@@ -176,7 +176,7 @@ Fan.prototype.identify = function(callback) {
 
 Fan.prototype.getServices = function() {
 	this.informationService = new Service.AccessoryInformation();
-	informaitonService
+	informationService
 	.setCharacteristic(Characteristic.Manufacturer, this.manufacturer)
 	.setCharacteristic(Characteristic.Model, this.model)
 	.setCharacteristic(Characteristic.SerialNumber, this.serial)
