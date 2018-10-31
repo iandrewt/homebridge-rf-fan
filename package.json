@@ -1,6 +1,6 @@
 {
   "name": "homebridge-rf-fan",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Control 7 speed fan with REST API",
   "homepage": "https://github.com/iandrewt/homebridge-rf-fan",
   "repository": "github:iandrewt/homebridge-rf-fan",

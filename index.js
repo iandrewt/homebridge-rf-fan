@@ -11,13 +11,13 @@ module.exports = function(homebridge) {
 function Fan(log, config) {
 	this.log = log;
 
-	this.host = config.host;
-	this.port = config.port;
-	this.name = config.name;
-	this.manufacturer = config.manufacturer;
-	this.model = config.model;
-	this.serial = config.serial;
-	this.id = config.id;
+	this.host = config.host || 'localhost';
+	this.port = config.port || 5000;
+	this.name = config.name || 'Fan';
+	this.manufacturer = config.manufacturer || 'Mercator';
+	this.model = config.model || 'FRM98';
+	this.serial = config.serial || '0000-0000';
+	this.id = config.id || 1;
 
 	this.state = {
 		power: false,
