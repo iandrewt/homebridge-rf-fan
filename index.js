@@ -29,7 +29,7 @@ function Fan(log, config) {
 
 Fan.prototype.getRelays = function(value, callback) {
 	request({
-		url: 'http://' + this.host + ":" + this.port + '/fan/api/v1.0/status',
+		url: 'http://' + this.host + ':' + this.port + '/fan/api/v1.0/status',
 		method: 'GET',
 		json: true,
 		body: value
@@ -46,7 +46,7 @@ Fan.prototype.getRelays = function(value, callback) {
 
 Fan.prototype.updateRelays = function(value, callback) {
 	request({
-		url: 'http://' + this.host + '/fan/api/v1.0/update',
+        url: 'http://' + this.host + ':' + this.port + '/fan/api/v1.0/update',
 		method: 'POST',
 		json: true,
 		body: value
