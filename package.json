@@ -1,5 +1,5 @@
 {
-  "name": "homebridge-rf-fan",
+  "name": "@iandrewt/homebridge-rf-fan",
   "version": "1.0.5",
   "description": "Control 7 speed fan with REST API",
   "homepage": "https://github.com/iandrewt/homebridge-rf-fan",
