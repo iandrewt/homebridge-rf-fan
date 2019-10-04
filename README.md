@@ -1,8 +1,8 @@
-#homebridge-rf-fan
+# homebridge-rf-fan
 
 This is a homebridge plugin to control RF devices, in this case to emulate a Mercator FRM98 fan controller.
 
-##What does this plugin do?
+## What does this plugin do?
 
 This plugin communicates with [rf-fan](https://github.com/iandrewt/rf-fan) via the REST API. Feel free to fork and modify either the plugin or the API to suit your RF fan.
 
